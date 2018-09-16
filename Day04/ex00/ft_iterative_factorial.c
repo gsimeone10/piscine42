@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:38:58 by gsimeone          #+#    #+#             */
-/*   Updated: 2018/09/13 16:16:43 by gsimeone         ###   ########.fr       */
+/*   Created: 2018/09/14 16:46:50 by gsimeone          #+#    #+#             */
+/*   Updated: 2018/09/14 17:00:30 by gsimeone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void 	ft_ft(int *nbr)
+int	ft_iterative_factorial(int nb)
 {
-	*nbr = 42;
+	int i;
+	int n;
+
+	n = nb;
+	i = 1;
+	while(n > 0)
+	{
+		if(nb < 1 || nb < 13)
+		{
+			nb = nb * (n - i);
+		}
+		else
+			return(0);
+		i++;
+	}
+	return (nb);
 }
 
 int	main(void)
 {
-	int nbr[10] = "50";
-	ft_ft(nbr);
-	printf("%d", nbr);
+	printf("%d", ft_iterative_factorial(4));
 	return(0);
 }

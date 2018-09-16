@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:38:58 by gsimeone          #+#    #+#             */
-/*   Updated: 2018/09/13 16:16:43 by gsimeone         ###   ########.fr       */
+/*   Created: 2018/09/13 21:38:22 by gsimeone          #+#    #+#             */
+/*   Updated: 2018/09/13 22:33:29 by gsimeone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void 	ft_ft(int *nbr)
+char	*ft_strrev(char *str)
 {
-	*nbr = 42;
-}
+	int start;
+	int end;
+	int rev;
 
-int	main(void)
-{
-	int nbr[10] = "50";
-	ft_ft(nbr);
-	printf("%d", nbr);
-	return(0);
+	start = 0;
+	end = 0;
+	while (str[end] =! '\0')
+	{
+		end++;
+	}
+	
+	end -= 1;
+	while(start <= end)
+	{
+		rev = str[end];
+		str[end] = str[start];
+		str[start] = rev;
+		start++;
+		end--;
+	}
 }

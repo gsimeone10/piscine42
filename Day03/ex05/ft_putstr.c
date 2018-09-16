@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:38:58 by gsimeone          #+#    #+#             */
-/*   Updated: 2018/09/13 16:16:43 by gsimeone         ###   ########.fr       */
+/*   Created: 2018/09/13 17:27:10 by gsimeone          #+#    #+#             */
+/*   Updated: 2018/09/13 18:10:47 by gsimeone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void 	ft_ft(int *nbr)
+void	ft_putchar(char c)
 {
-	*nbr = 42;
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;	
+	}
 }
 
 int	main(void)
 {
-	int nbr[10] = "50";
-	ft_ft(nbr);
-	printf("%d", nbr);
+	char	str[5] = "ciao";
+	
+	ft_putstr(str);
 	return(0);
 }

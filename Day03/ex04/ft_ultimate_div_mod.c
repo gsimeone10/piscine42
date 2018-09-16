@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:38:58 by gsimeone          #+#    #+#             */
-/*   Updated: 2018/09/13 16:16:43 by gsimeone         ###   ########.fr       */
+/*   Created: 2018/09/13 16:51:48 by gsimeone          #+#    #+#             */
+/*   Updated: 2018/09/13 21:34:09 by gsimeone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void 	ft_ft(int *nbr)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	*nbr = 42;
-}
+	int c;
+	int d;
 
-int	main(void)
-{
-	int nbr[10] = "50";
-	ft_ft(nbr);
-	printf("%d", nbr);
-	return(0);
+	c = *a;
+	d = *b;
+	*a = c / d;
+	*b = c % d;
 }

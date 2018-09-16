@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsimeone <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/12 19:38:58 by gsimeone          #+#    #+#             */
-/*   Updated: 2018/09/13 16:16:43 by gsimeone         ###   ########.fr       */
+/*   Created: 2018/09/13 18:49:03 by gsimeone          #+#    #+#             */
+/*   Updated: 2018/09/13 21:35:25 by gsimeone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 #include <stdio.h>
 
-void 	ft_ft(int *nbr)
+void	ft_putchar(char c)
 {
-	*nbr = 42;
+	write(1, &c, 1);
 }
 
-int	main(void)
+int		ft_strlen(char *str)
 {
-	int nbr[10] = "50";
-	ft_ft(nbr);
-	printf("%d", nbr);
+	int count;
+
+	i = 0;
+	count = 0;
+	while (str[i] != '\0')
+	{
+		count++;
+	}
+
+	return(0);
+}
+
+int		main(void)
+{
+	char	str[8] = "giovanni";
+	int ft_strlen(count);
+
+	ft_putchar(count);
 	return(0);
 }
